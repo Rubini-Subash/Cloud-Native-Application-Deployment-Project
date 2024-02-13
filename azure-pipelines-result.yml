@@ -30,6 +30,9 @@ stages:
         tags: |
           $(containerRegistry)/$(imageRepository):$(tag)
 
+    - script: docker images
+      displayName: 'List Docker Images'
+
 - stage: Push
   displayName: Push
   jobs:
