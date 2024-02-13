@@ -1,4 +1,10 @@
 trigger:
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Registryforcicd'
+    repository: 'myrepo'
+    command: 'buildAndPush'
+    Dockerfile: 'result/Dockerfile'
   paths:
     include:
       - result/*
