@@ -42,9 +42,9 @@ stages:
       vmImage: 'ubuntu-latest'
     steps:
     - task: Docker@2
-      displayName: Build an image
+      displayName: push an image
       inputs:
-        command: 'build'
+        command: 'push'
         Dockerfile: '$(dockerfilePath)'
         tags: |
           $(containerRegistry)/$(imageRepository):$(tag)
