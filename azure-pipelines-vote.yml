@@ -49,5 +49,5 @@ stages:
       inputs:
         scriptPath: 'scripts/UpdateK8sManifest.sh'
         args: 'vote $(imageRepository) $(tag)'
-  
+      
 
