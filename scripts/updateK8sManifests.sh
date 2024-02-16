@@ -6,7 +6,11 @@ sudo apt-get install dos2unix -y
 # Convert line endings to Unix style
 dos2unix scripts/updateK8sManifests.sh
 
-set -x
+# Set Git user email and name
+git config --global user.email "ndinesh.kumar@energyexemplar.com"
+git config --global user.name "N Dinesh Kumar"
+
+# set -x
 
 # Set the repository URL
 REPO_URL="https://u3hnhtr44w2qxfk7zbtkdl44l6q53hvqou6o5gp3aca73omhjtqa@dev.azure.com/ndineshkumar/Main_project/_git/Main_project"
