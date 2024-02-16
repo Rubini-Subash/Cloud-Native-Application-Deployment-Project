@@ -45,17 +45,9 @@ stages:
   - job: Update
     displayName: Update
     steps:
-    - task: UseDotNet@2
-      displayName: 'Install dos2unix'
-      inputs:
-        packageType: 'sdk'
-        version: '2.1.x'
-        installationPath: $(Agent.ToolsDirectory)/dotnet
-        performMultiLevelLookup: true
-
     - script: |
-        dotnet tool install -g dotnet-dos2unix --version 1.2.3
-        dotnet dos2unix scripts/updateK8sManifests.sh
+        sed -i 's/\r$//' scripts/updateK8sManifests.sh
+        chmod +x scripts/updateK8sManifests.sh
       displayName: 'Convert line endings to Unix style'
 
     - task: ShellScript@1
