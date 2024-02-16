@@ -21,4 +21,4 @@ spec:
         - containerPort: 80
           name: vote
       ImagePullSecret:
-        -name: acr-secret
+      - name: regcred
