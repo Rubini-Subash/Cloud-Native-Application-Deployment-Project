@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Install dos2unix to handle line endings
+sudo apt-get install dos2unix -y
+
+# Convert line endings to Unix style
+dos2unix /path/to/your/script.sh
+
 set -x
 
 # Set the repository URL
