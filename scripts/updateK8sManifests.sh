@@ -4,7 +4,7 @@
 sudo apt-get install dos2unix -y
 
 # Convert line endings to Unix style
-dos2unix /path/to/your/script.sh
+dos2unix scripts/updateK8sManifests.sh
 
 set -x
 
