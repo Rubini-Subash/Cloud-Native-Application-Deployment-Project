@@ -7,13 +7,13 @@ sudo apt-get install dos2unix -y
 dos2unix scripts/updateK8sManifests.sh
 
 # Set Git user email and name
-git config --global user.email "ndinesh.kumar@energyexemplar.com"
-git config --global user.name "N Dinesh Kumar"
+git config --global user.email <email_address>
+git config --global user.name <user_name>
 
 # set -x
 
 # Set the repository URL
-REPO_URL="https://u3hnhtr44w2qxfk7zbtkdl44l6q53hvqou6o5gp3aca73omhjtqa@dev.azure.com/ndineshkumar/Main_project/_git/Main_project"
+REPO_URL=<REPO_URL>
 
 # Clone the git repository into the /tmp directory
 git clone "$REPO_URL" /tmp/temp_repo
@@ -23,7 +23,7 @@ cd /tmp/temp_repo
 
 # Make changes to the Kubernetes manifest file(s)
 # For example, let's say you want to change the image tag in a deployment.yaml file
-sed -i "s|image:.*|image: myacr0606.azurecr.io\/$2:$3|g" k8s-specifications/$1-deployment.yaml
+sed -i "s|image:.*|image: <Acr_Name>\/$2:$3|g" <Yaml_File_Path>
 
 # Add the modified files
 git add .
