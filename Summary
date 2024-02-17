@@ -1,0 +1,36 @@
+1.Project Setup: Cloned a Docker sample project from Git to Azure.
+
+2.Microservices Architecture:
+
+Vote microservice in Python
+Worker microservice in .NET
+Result microservice in Node.js
+
+3.Docker Image Build and Push:
+Built and pushed Docker images to Azure Container Registry.
+
+4.Azure Pipelines:
+Created separate pipelines for each microservice to automate the build and push process.
+
+5.Azure Container Registry:
+Created an Azure Container Registry to store and manage the Docker images.
+
+6.Self-Hosted Agent:
+Set up a self-hosted agent to ensure all three pipelines could run simultaneously, improving efficiency.
+
+7.Continuous Deployment (CD) with GitOps and ArgoCD:
+Utilized GitOps with ArgoCD for continuous delivery to Kubernetes.
+
+8.Kubernetes Service:
+Created a Kubernetes service to manage the application deployment.
+
+9.ArgoCD Installation and Configuration:
+Installed and configured ArgoCD for GitOps-based application deployment.
+
+10.CI Pipeline Enhancement:
+Added a new stage called 'update' to the CI pipeline. This stage updates the image in the Kubernetes manifest file whenever a new image is built and pushed. ArgoCD detects this change and deploys the updated image to the Kubernetes cluster, ensuring continuous delivery.
+
+11.ImagePullSecret for Private Registry Authentication:
+Used the ImagePullSecret concept to store information required to authenticate to a private registry, ensuring secure access to the Azure Container Registry.
+
+Architecture:
