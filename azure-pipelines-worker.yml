@@ -12,9 +12,9 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'd23c416f-dc3c-44b1-8988-f9b7cd5744d6'
+  dockerRegistryServiceConnection: <Service_Connection_Of_ACR>
   imageRepository: 'workerapp'
-  containerRegistry: 'myacr0606.azurecr.io'
+  containerRegistry: <ACR_Name>
   dockerfilePath: '$(Build.SourcesDirectory)worker/Dockerfile'
   tag: '$(Build.BuildId)'
 
